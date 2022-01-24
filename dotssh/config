@@ -1,0 +1,299 @@
+host mrs.felk.cvut.cz
+     hostname mrs.felk.cvut.cz
+     user git
+     # identityfile ~/.ssh/id_rsa_spurnvoj
+     # identityfile ~/.ssh/petr
+     # identityfile ~/.ssh/vojta
+     # identityfile ~/.ssh/tomas
+     # identityfile ~/.ssh/stibipe
+     identityfile ~/.ssh/stibipet
+     # identityfile ~/.ssh/honza
+     # identityfile ~/.ssh/daniel
+
+host github.com
+     hostname github.com
+     user git
+     # identityfile ~/.ssh/id_rsa_spurnvoj
+     # identityfile ~/.ssh/petr
+     # identityfile ~/.ssh/vojta
+     # identityfile ~/.ssh/tomas
+     # identityfile ~/.ssh/stibipe
+     # identityfile ~/.ssh/stibipet
+     # identityfile ~/.ssh/honza
+     identityfile ~/.ssh/daniel
+
+host vio
+	hostname 192.168.69.135
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host alfa
+	hostname 192.168.69.160
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host bravo
+	hostname 192.168.69.161
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host charlie
+	hostname 192.168.69.162
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host delta
+	hostname 192.168.69.163
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host echo
+	hostname 192.168.69.164
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host foxtrot
+	hostname 192.168.69.165
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host golf
+	hostname 192.168.69.166
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host hotel
+	hostname 192.168.69.167
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host india
+	hostname 192.168.69.168
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host juliett
+	hostname 192.168.69.190
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host kilo
+	hostname 192.168.69.169
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host lima
+	hostname 192.168.69.170
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host mike
+	hostname 192.168.69.171
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host oscar
+	hostname 192.168.69.146
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host papa
+	hostname 192.168.69.145
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host quebec
+	hostname 192.168.69.147
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host romeo
+	hostname 192.168.69.149
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host sierra
+	hostname 192.168.69.150
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host tango
+	hostname 192.168.69.151
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uniform
+	hostname 192.168.69.142
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host victor
+	hostname 192.168.69.153
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host whiskey
+	hostname 192.168.69.144
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host xray
+	hostname 192.168.69.155
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host zulu
+	hostname 192.168.69.156
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host xavier
+	hostname 192.168.69.199
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host xavnx1
+	hostname 192.168.69.195
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host eagle
+	hostname 192.168.69.191
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav1
+	hostname 192.168.69.101
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host alice
+	hostname 192.168.69.101
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav2
+	hostname 192.168.69.102
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host bob
+	hostname 192.168.69.102
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav3
+	hostname 192.168.69.103
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host carol
+	hostname 192.168.69.103
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav4
+	hostname 192.168.69.104
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host diego
+	hostname 192.168.69.104
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav5
+	hostname 192.168.69.105
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host eric
+	hostname 192.168.69.105
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav6
+	hostname 192.168.69.106
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host frank
+	hostname 192.168.69.106
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav7
+	hostname 192.168.69.107
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host grace
+	hostname 192.168.69.107
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav8
+	hostname 192.168.69.108
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host heidi
+	hostname 192.168.69.108
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav9
+	hostname 192.168.69.109
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host ivan
+	hostname 192.168.69.109
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav21
+	hostname 192.168.69.121
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host unique
+	hostname 192.168.69.121
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav22
+	hostname 192.168.69.122
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host vanna
+	hostname 192.168.69.122
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host franta
+	hostname 192.168.69.110
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host uav10
+	hostname 192.168.69.110
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host judy
+	hostname 192.168.69.110
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host klaxalk
+	hostname 192.168.69.11
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
+host dan
+	hostname 192.168.69.42
+	user mrs
+	identityfile ~/.ssh/id_rsa_drone_login
+
