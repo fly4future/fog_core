@@ -1,11 +1,8 @@
 host mrs.felk.cvut.cz
      hostname mrs.felk.cvut.cz
      user git
-     # identityfile ~/.ssh/id_rsa_spurnvoj
-     # identityfile ~/.ssh/petr
      # identityfile ~/.ssh/vojta
      # identityfile ~/.ssh/tomas
-     # identityfile ~/.ssh/stibipe
      identityfile ~/.ssh/stibipet
      # identityfile ~/.ssh/honza
      # identityfile ~/.ssh/daniel
@@ -13,11 +10,8 @@ host mrs.felk.cvut.cz
 host github.com
      hostname github.com
      user git
-     # identityfile ~/.ssh/id_rsa_spurnvoj
-     # identityfile ~/.ssh/petr
      # identityfile ~/.ssh/vojta
      # identityfile ~/.ssh/tomas
-     # identityfile ~/.ssh/stibipe
      # identityfile ~/.ssh/stibipet
      # identityfile ~/.ssh/honza
      identityfile ~/.ssh/daniel
