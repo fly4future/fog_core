@@ -67,19 +67,19 @@ mkdir -p "$TMUX_DIR"
 input=(
   'Rosbag' 'ros2 bag record -a -o '"$SUBLOG_DIR"'/bag -x "/(.*)/octomap_server/(.*)"
 '
-  'ProtocolSplitter' 'journalctl -u agent_protocol_splitter -b -f
+  'ProtocolSplitter' 'journalctl -u agent_protocol_splitter -b -f -o cat
 '
-  'MavlinkRouter' 'journalctl -u mavlink-router -b -f
+  'MavlinkRouter' 'journalctl -u mavlink-router -b -f -o cat
 '
-  'MicroRtpsAgent' 'journalctl -u micrortps_agent -b -f
+  'MicroRtpsAgent' 'journalctl -u micrortps_agent -b -f -o cat
 '
-  'Control' 'journalctl -u control_interface -b -f
+  'Control' 'journalctl -u control_interface -b -f -o cat
 '
-  'Navigation' 'journalctl -u navigation -b -f
+  'Navigation' 'journalctl -u navigation -b -f -o cat
 '
-  'Odometry' 'journalctl -u odometry2 -b -f
+  'Odometry' 'journalctl -u odometry2 -b -f -o cat
 '
-  'Bumper' 'journalctl -u bumper  -b -f
+  'Bumper' 'journalctl -u bumper  -b -f -o cat
 '
   'Arming' 'ros2 service call /$DRONE_DEVICE_ID/control_interface/arming std_srvs/srv/SetBool "data: true"'
   'Takeoff' 'ros2 service call /$DRONE_DEVICE_ID/control_interface/takeoff std_srvs/srv/Trigger {}'
