@@ -1,11 +1,7 @@
 # fog_core
-General stuff for fog UAV in ROS2,
+General stuff for fog UAV in ROS2
+
+To generate all symlinks and install necessary pkgs call:
+- `scripts/install.sh`
 
 
-
-## Troubleshooting
-
-```
-If recording rosbag does not saves tmux logs, 
-`sudo apt install moreutils`
-```
