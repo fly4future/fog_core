@@ -73,7 +73,7 @@ input=(
 '
   'MicroRtpsAgent' 'journalctl -u micrortps_agent -b -f -o cat
 '
-  'CloudLink' 'journalctl -u cloud-link -b -f -o cat
+  'CloudLink' 'journalctl -u cloud_link -b -f -o cat
 '
   'MissionEngine' 'journalctl -u mission_engine -b -f -o cat
 '
