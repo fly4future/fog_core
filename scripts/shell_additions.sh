@@ -48,9 +48,7 @@ appendBag2() {
 
     if test -d "$bag_adress"; then
 
-      echo $bag_adress
       appended_adress=$bag_adress\_$1
-      echo $appended_adress 
       mv $bag_adress $appended_adress
       ln -sf $appended_adress ~/bag_files/latest
 
