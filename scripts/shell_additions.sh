@@ -1,8 +1,9 @@
 # colcon_cd setup
 source /usr/share/colcon_cd/function/colcon_cd.sh
-export _colcon_cd_root=/opt/ros/galactic/
+export _colcon_cd_root=/home/sad/
 
 # aliases
+alias ccd='colcon_cd'
 alias gs='git status'
 alias gd='git diff'
 alias sb='source ~/.bashrc'
