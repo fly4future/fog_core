@@ -21,7 +21,7 @@ while true; do
 
     echo "source $MY_PATH/scripts/shell_additions.sh" >> ~/.bashrc
     
-    sudo apt install -y vim net-tools moreutils python3-colcon-common-extensions
+    sudo apt install -y vim net-tools moreutils python3-colcon-common-extensions tmux
     
     ln -sf "$MY_PATH/config/tmux.conf" ~/.tmux.conf
     ln -sf "$MY_PATH/tmux/tmux.sh" ~/tmux.sh
