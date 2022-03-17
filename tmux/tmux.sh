@@ -65,8 +65,8 @@ mkdir -p "$TMUX_DIR"
 # 'name' 'command'
 # DO NOT PUT SPACES IN THE NAMES
 input=(
-  'Rosbag' 'ros2 bag record -a -o '"$SUBLOG_DIR"'/bag -x "/(.*)/octomap_server/(.*)"
-'
+  'Rosbag' 'ros2 launch fog_core rosbag.py path:='"$SUBLOG_DIR"''
+
   'ProtocolSplitter' 'journalctl -u agent_protocol_splitter -b -f -o cat
 '
   'MavlinkRouter' 'journalctl -u mavlink-router -b -f -o cat
