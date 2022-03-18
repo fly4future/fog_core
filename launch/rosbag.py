@@ -23,7 +23,7 @@ exclude=(
 
 def launch_setup(context, *args, **kwargs):
     path = LaunchConfiguration("path").perform(context) + "/bag"
-    return [launch.actions.ExecuteProcess(cmd=['ros2', 'bag', 'record', '-a', '-o', path, '-x', exclude], output='screen')]
+    return [launch.actions.ExecuteProcess(cmd=['ros2', 'bag', 'record', '-e', '.*', '-o', path, '-x', exclude], output='screen')]
 
 def generate_launch_description():
     ld = launch.LaunchDescription()
