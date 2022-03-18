@@ -10,11 +10,11 @@ date = datetime.now().strftime('x_%Y_%m_%d__%H_%M_%S')
 PATH = HOME +"/bag_files/" + date
 
 # List of EXCLUDED topics:
-exclude = ['(.*)octomap_server(.*)']
+exclude_list = ['(.*)octomap_server(.*)']
 
 # Examples:
-# exclude = []
-# exclude = ['(.*)octomap_server(.*)', '(.*)image_raw(.*)']
+# exclude_list = []
+# exclude_list = ['(.*)octomap_server(.*)', '(.*)image_raw(.*)']
 
 ## Every topic containing "octomap"
 #'(.*)octomap_server(.*)'
@@ -28,9 +28,9 @@ exclude = ['(.*)octomap_server(.*)']
 
 def launch_setup(context, *args, **kwargs):
     path = LaunchConfiguration("path").perform(context) + "/bag"
-    exclude_list = '|'.join(exclude)
-    print("excluding:", exclude_list)
-    return [launch.actions.ExecuteProcess(cmd=['ros2', 'bag', 'record', '-a', '-o', path, '-x', exclude_list], output='screen')]
+    exclude = '|'.join(exclude_list)
+    print("excluding:", exclude)
+    return [launch.actions.ExecuteProcess(cmd=['ros2', 'bag', 'record', '-e', '.*', '-o', path, '-x', exclude], output='screen')]
 
 def generate_launch_description():
     ld = launch.LaunchDescription()
