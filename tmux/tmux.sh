@@ -85,6 +85,7 @@ input=(
   'Takeoff' 'ros2 service call /$DRONE_DEVICE_ID/control_interface/takeoff std_srvs/srv/Trigger {}'
   'Local_waypoint' 'ros2 service call /$DRONE_DEVICE_ID/navigation/local_waypoint fog_msgs/srv/Vec4 "goal: [0, 0, 2, 0]"'
   'Land' 'ros2 service call /$DRONE_DEVICE_ID/control_interface/land std_srvs/srv/Trigger {}'
+  'Hover' 'ros2 service call /$DRONE_DEVICE_ID/navigation/hover std_srvs/srv/Trigger {}'
 )
 
 init_window="Status"

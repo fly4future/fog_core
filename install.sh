@@ -43,6 +43,7 @@ while true; do
   if [[ $response =~ ^(y|Y)=$ ]]
   then
 
+    mkdir -p "$HOME"/.ssh
     cp "$MY_PATH"/dotssh/* "$HOME"/.ssh
     break
   elif [[ $response =~ ^(n|N)=$ ]]

@@ -1,0 +1,14 @@
+[Unit]
+Description="Mesh Init Service"
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStartPre=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh;/opt/ros/galactic/share/bin/mesh-ibss.sh ap"
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; /opt/ros/galactic/lib/mesh_com/mesh_executor"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=PX4 Mavlink Message Control Service
+Requires=mesh.service
+After=mesh.service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; ros2 launch px4_mavlink_ctrl mavlink_ctrl.launch"
+
+[Install]
+WantedBy=multi-user.target

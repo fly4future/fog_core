@@ -1,0 +1,17 @@
+[Unit]
+Description="Drone cloud communication link"
+Requires=mesh.service
+After=mesh.service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+WorkingDirectory=~
+Restart=always
+RestartSec=2
+EnvironmentFile=/enclave/drone_device_id
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; /usr/bin/cloud-link -device_id $DRONE_DEVICE_ID -private_key /enclave/rsa_private.pem"
+
+[Install]
+WantedBy=multi-user.target

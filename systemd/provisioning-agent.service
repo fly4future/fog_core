@@ -1,0 +1,17 @@
+[Unit]
+Description="Drone provisioning agent."
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+WorkingDirectory=~
+Restart=always
+RestartSec=2
+ExecStart=/bin/sh -c "/usr/bin/provisioning-agent"
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,15 @@
+[Unit]
+Description="OTA updater daemon."
+Requires=update_agent.service
+After=update_agent.service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+Restart=always
+RestartSec=2
+ExecStart=/opt/ros/galactic/bin/ota-update-daemon
+
+[Install]
+WantedBy=multi-user.target

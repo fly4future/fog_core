@@ -1,0 +1,13 @@
+[Unit]
+Description="micrortps_agent startup"
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; micrortps_agent -b 2000000 -t UDP -r 2020 -s 2019 -n $DRONE_DEVICE_ID -a 127.0.0.1"
+Restart=on-failure
+RestartSec=1s
+
+[Install]
+WantedBy=multi-user.target

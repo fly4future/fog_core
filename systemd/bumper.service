@@ -1,0 +1,14 @@
+[Unit]
+Description=Bumper
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+Restart=always
+RestartSec=2s
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; . /home/sad/workspace/install/local_setup.sh; ros2 launch fog_bumper bumper_launch.py"
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
