@@ -1,0 +1,21 @@
+[Unit]
+Description="Drone mission data recorder"
+Requires=mesh.service
+After=mesh.service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+WorkingDirectory=~
+Restart=always
+RestartSec=2
+EnvironmentFile=/enclave/drone_device_id
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; if [ ! -e /tmp/mission-data ]; then mkdir /tmp/mission-data; fi; \
+    /usr/bin/mission-data-recorder \
+        -device-id \"$DRONE_DEVICE_ID\" \
+        -dest-dir /tmp/mission-data \
+        -extra-args \"--qos-profile-overrides-path,$MISSION_DATA_RECORDER_QOS_OVERRIDES\""
+
+[Install]
+WantedBy=multi-user.target

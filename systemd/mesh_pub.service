@@ -1,0 +1,13 @@
+[Unit]
+Description="Mesh Service"
+Requires=mesh-init.service
+After=mesh-init.service
+
+[Service]
+User=sad
+Group=sad
+Type=simple
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; ros2 run mesh_com mesh_publisher --ros-args -r __ns:=/$DRONE_DEVICE_ID"
+
+[Install]
+WantedBy=multi-user.target

@@ -65,8 +65,8 @@ mkdir -p "$TMUX_DIR"
 # 'name' 'command'
 # DO NOT PUT SPACES IN THE NAMES
 input=(
-  'Rosbag' 'ros2 bag record -a -o '"$SUBLOG_DIR"'/bag -x "/(.*)/octomap_server/(.*)"
-'
+  'Rosbag' 'ros2 launch fog_core rosbag.py path:='"$SUBLOG_DIR"''
+
   'ProtocolSplitter' 'journalctl -u agent_protocol_splitter -b -f -o cat
 '
   'MavlinkRouter' 'journalctl -u mavlink-router -b -f -o cat
@@ -79,7 +79,7 @@ input=(
 '
   'Odometry' 'journalctl -u odometry2 -b -f -o cat
 '
-  'Change Odometry' 'ros2 service call /cze04/odometry/change_odometry_source fog_msgs/srv/ChangeOdometrySource "{odometry_type:{type: 3}"'
+  'Change Odometry' 'ros2 service call /cze04/odometry/change_odometry_source fog_msgs/srv/ChangeOdometrySource "{odometry_type:{type: 3}}"'
   'Reset Hector' 'ros2 service call /cze04/odometry/reset_hector_service std_srvs/srv/Trigger {}'
   'Hector' 'journalctl -u hector -b -f -o cat
 '

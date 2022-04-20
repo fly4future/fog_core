@@ -1,0 +1,15 @@
+[Unit]
+Description="DepthAI control ROS2 node"
+Requires=mesh.service
+After=mesh.service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+Restart=always
+RestartSec=10
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; /opt/ros/galactic/lib/depthai_ctrl/camera_node --ros-args --remap __ns:=/$DRONE_DEVICE_ID -p address:=$RTSP_SERVER_ADDRESS/$DRONE_DEVICE_ID"
+
+[Install]
+WantedBy=multi-user.target

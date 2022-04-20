@@ -1,0 +1,13 @@
+[Unit]
+Description=RP Lidar Service
+
+[Service]
+Type=simple
+User=sad
+Group=sad
+Restart=always
+RestartSec=2s
+ExecStart=/bin/sh -c ". /opt/ros/galactic/setup_fog.sh; ros2 launch rplidar_ros2 sensors_launch.py"
+
+[Install]
+WantedBy=multi-user.target
