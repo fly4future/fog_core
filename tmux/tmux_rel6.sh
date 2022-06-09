@@ -9,7 +9,13 @@ fi
 # change this to your liking
 PROJECT_NAME=ros2
 
-SESSION_NAME=mav
+if [[ "$1" =~ [a-z]*@.* ]]; then
+  SESSION_NAME=mav
+
+else 
+  SESSION_NAME=$1
+fi
+
 
 # prefere the user-compiled tmux
 if [ -f /usr/local/bin/tmux ]; then
