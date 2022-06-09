@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied, needs to add argument to ssh - either alias or full root@ip"
+    exit
+fi
+
 # change this to your liking
 PROJECT_NAME=ros2
 
