@@ -36,9 +36,10 @@ fi
 # DO NOT PUT SPACES IN THE NAMES
 input=(
   'hyper' 'TERM=xterm-256color; ssh '$1''
-  'log' 'TERM=xterm-256color; ssh '$1' fog logs fog_navigation -f'
+  'logs' 'TERM=xterm-256color; ssh '$1' fog logs fog_navigation -f'
   'app' 'TERM=xterm-256color; ssh -t '$1' fog ssh app'
   'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host -it ghcr.io/tiiuae/tii-rviz2:main'\'' "'
+  'tools' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host -it ghcr.io/tiiuae/tii-f4f-tools:main bash'\'' "'
 )
 
 init_window="app"
