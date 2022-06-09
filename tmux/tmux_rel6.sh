@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]
   then
-    echo "No arguments supplied, needs to add argument to ssh - either alias or full root@ip"
+    echo "No arguments supplied, needs to add argument to ssh - either alias or full root@<ip>"
     exit
 fi
 
@@ -38,9 +38,9 @@ input=(
   'hyper' 'TERM=xterm-256color; ssh '$1''
   'logs' 'TERM=xterm-256color; ssh '$1' fog logs fog_navigation -f'
   'app' 'TERM=xterm-256color; ssh -t '$1' fog ssh app'
-  'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host -it ghcr.io/tiiuae/tii-rviz2:main'\'' "'
-  'server' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=action -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
-  'client' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker exec -it action bash'\'' "'
+  'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host -it ghcr.io/tiiuae/tii-rviz2'\'' "'
+  'tools' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=f4f-tools --volume=/data:/data -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
+  'actions' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker exec -it f4f-tools bash'\'' "'
 )
 
 init_window="app"
