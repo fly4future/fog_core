@@ -40,7 +40,7 @@ input=(
   'app' 'TERM=xterm-256color; ssh -t '$1' fog ssh app'
   'tools' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=f4f-tools --volume=/data:/data -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
   'actions' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker exec -it f4f-tools bash'\'' "'
-  'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --name=rviz --volume=/data:/data -it ghcr.io/tiiuae/tii-rviz2'\'' "'
+  'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --volume=/data:/data -it ghcr.io/tiiuae/tii-rviz2'\'' "'
 )
 
 init_window="app"
