@@ -38,8 +38,10 @@ input=(
   'hyper' 'TERM=xterm-256color; ssh '$1''
   'logs' 'TERM=xterm-256color; ssh '$1' fog logs fog_navigation -f'
   'app' 'TERM=xterm-256color; ssh -t '$1' fog ssh app'
-  'tools' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=f4f-tools --volume=/data:/data -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
-  'actions' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker exec -it f4f-tools bash'\'' "'
+  'mesh' 'TERM=xterm-256color; ssh -t '$1' fog ssh mesh'
+  'tools' 'TERM=xterm-256color; ssh -t '$1' "fog ssh mesh '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=f4f-tools --volume=/data:/data -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
+  'actions1' 'TERM=xterm-256color; ssh -t '$1' "fog ssh mesh '\''docker exec -it f4f-tools bash'\'' "'
+  'actions2' 'TERM=xterm-256color; ssh -t '$1' "fog ssh mesh '\''docker exec -it f4f-tools bash'\'' "'
   'rviz' 'TERM=xterm-256color; ssh -t '$1' "fog ssh app '\''docker run --network=host --volume=/data:/data -it ghcr.io/tiiuae/tii-rviz2'\'' "'
 )
 
