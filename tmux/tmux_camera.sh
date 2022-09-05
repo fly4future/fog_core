@@ -11,8 +11,6 @@ if [ "$(id -u)" == "0" ]; then
   exec sudo -u mrs "$0" "$@"
 fi
 
-source $HOME/.bashrc
-
 # change this to your liking
 PROJECT_NAME=ros2_integration
 
@@ -71,8 +69,8 @@ input=(
 '
   'MavlinkRouter' 'mavlink-routerd
 '
-  'MicroRtpsAgent' 'micrortps_agent -b 2000000 -t UDP -r 2020 -s 2019 -n $DRONE_DEVICE_ID -a 127.0.0.1"
-'
+  'MicroRtpsAgent' 'micrortps_agent -b 2000000 -t UDP -r 2020 -s 2019 -n $DRONE_DEVICE_ID -a 127.0.0.1'
+
   # 'Control' 'journalctl -u control_interface -b -f -o cat
 # '
   'Arming' 'ros2 service call /$DRONE_DEVICE_ID/control_interface/arming std_srvs/srv/SetBool "data: true"'
