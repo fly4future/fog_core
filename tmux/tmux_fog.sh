@@ -43,6 +43,7 @@ input=(
   'tools' 'ssh -t '$1' "fog ssh mesh '\''docker run --network=host --env=DRONE_DEVICE_ID='$1' --name=f4f-tools --volume=/data:/data -it ghcr.io/tiiuae/tii-f4f-tools bash'\'' "'
   'actions1' 'ssh -t '$1' "fog ssh mesh '\''docker exec -it f4f-tools bash'\'' "'
   'actions2' 'ssh -t '$1' "fog ssh mesh '\''docker exec -it f4f-tools bash'\'' "'
+  'remmina' 'remmina'
   'rviz' 'ssh -t '$1' "fog ssh app '\''docker run --network=host --volume=/data:/data -it ghcr.io/tiiuae/tii-rviz2'\'' "'
 )
 
